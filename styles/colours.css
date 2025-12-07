@@ -1,0 +1,264 @@
+/* @keyframes rainbowbg {
+    0% {
+        background-color: #ff65f5;
+        background-color: #FA6900;
+    }
+
+    5% {
+        background-color: #EF404A;
+    }
+
+    10% {
+        background-color: #797979;
+    }
+
+    15% {
+        background-color: #F43BB8;
+    }
+
+    20% {
+        background-color: #EF404A;
+    }
+
+    25% {
+        background-color: #FA6900;
+    }
+
+    30% {
+        background-color: #F7941E;
+    }
+
+    35% {
+        background-color: #FFCB05;
+    }
+
+    40% {
+        background-color: #FFFEAE;
+    }
+
+    45% {
+        background-color: #C8D383;
+    }
+
+    50% {
+        background-color: #A6C885;
+    }
+
+    55% {
+        background-color: #01AC88;
+    }
+
+    60% {
+        background-color: #007F79;
+    }
+
+    65% {
+        background-color: #00A4A8;
+    }
+
+    70% {
+        background-color: #0066B3;
+    }
+
+    75% {
+        background-color: #008ED1;
+    }
+
+    80% {
+        background-color: #609CCF;
+    }
+
+    85% {
+        background-color: #A1D4E5;
+    }
+
+    90% {
+        background-color: #B0B8C1;
+    }
+
+    95% {
+        background-color: #B09DC1;
+    }
+
+    100% {
+        background-color: #A1489B;
+    }
+} */
+
+@keyframes rainbowbg {
+    0% {
+        background-color: #fa0000;
+    }
+    15% {
+        background-color: #fadd00;
+    }
+    25% {
+        background-color: #19b800;
+    }
+    40% {
+        background-color: #00fa4f;
+    }
+    50% {
+        background-color: #00faf6;
+    }
+    65% {
+        background-color: #005cfa;
+    }
+    80% {
+        background-color: #7d00fa;
+    }
+    95% {
+        background-color: #fa00d4;
+    }
+    100% {
+        background-color: #fa0000;
+    }
+}
+
+.colours-page {
+    /* background-background-color: #FA6900; */
+    animation: rainbowbg 20s infinite;
+}
+
+/* .colours-page h1 {
+    animation: rainbowbg 200s
+} */
+
+.colours-page .page-title {
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.section_colours {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    width: calc(100vw - 4rem);
+}
+
+.section_colours > div {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition: border-radius 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+.section_colours > div:hover {
+    border-radius: 0px;
+}
+.rainbow-stripe {
+    background: linear-gradient(90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%);
+    width: 200vw;
+    height: 4rem;
+}
+
+.emoji-random {
+    font-size: 4.99vw;
+}
+
+
+.section_websafe {
+    height: auto;
+}
+.section_websafe h1 {
+    font-weight: bold;
+    line-height: 0.8em;
+    margin-bottom: 4rem;
+}
+.websafe_table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.websafe_row {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.websafe_colour_block {
+    width: 50%;
+    height: 4rem;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.section_pinwheel {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section_pinwheel svg {
+    width: 20vw;
+    height: auto;
+    animation: rotate 2s linear infinite;
+}
+
+.section_complementary {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.section_complementary > div {
+    /* flex: 1; */
+    width: 33.33%;
+    height: 50%;
+    
+}
+
+.section_complementary .inner {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: border-radius 1s cubic-bezier(.61, .43, .12, .96),
+    transform 1s cubic-bezier(.61, .43, .12, .96);
+    transform: scale(1);
+}
+.section_complementary > div:hover .inner{
+    border-radius: 0;
+    transform: scale(0.5);
+}
+
+.section_complementary h2 {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: 8vw;
+    color: white;
+    mix-blend-mode: difference;
+    text-align: center;
+    line-height: .8em;
+}
